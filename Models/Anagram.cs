@@ -4,13 +4,13 @@ using System.Collections.Generic;
 
 namespace Anagram.Model
 {
-    public class Anagram
+    public class Ana
     {
-       private string _inputWord
-       private string _AnaWords
+       private string _inputWord;
+       private string _AnaWords;
 
 
-       public Anagram(string inputWord, string AnaWords)
+       public Ana(string inputWord, string AnaWords)
        {
            _inputWord = inputWord;
            _AnaWords = AnaWords;
