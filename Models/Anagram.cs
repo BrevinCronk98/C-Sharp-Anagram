@@ -6,24 +6,31 @@ namespace Anagram.Model
 {
     public class Ana
     {
-       private string _inputWord;
-       private string _AnaWords;
+        public char[] NewArray {get; set;}
+        private static string _inputWord;
+        private static List<string> _wordList = new List<string> {};
+        private static List<char[]> _instances = new List<char[]>{};
+        
+        public Ana(string inputWord)
+        {
+            _wordList.Add(inputWord);
 
+            char[] charArray = inputWord.ToCharArray();
+            Array.Sort(charArray); 
+            NewArray = CharArray;
 
-       public Ana(string inputWord, string AnaWords)
-       {
-           _inputWord = inputWord;
-           _AnaWords = AnaWords;
-       }
+            _instances.Add(word);
+        }
 
-       public string GetWord()
-       {
-           return _inputWord;
-       }
+        public static List<string> GetWords()
+        {
+            return _wordList;
+        }
 
-       public string GetAnagrams()
-       {
-           return _AnaWords;
-       }
+        public static List<char[]> GetInstances()
+        {
+            return _instances;
+        }
+       
     }
 }
